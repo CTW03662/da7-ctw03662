@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+- name: [schema_name] #Change it
+  tables:
+  - name: t_city_bikes
+    description: >
+      Citi Bike is the nation's largest bike share program, with 10,000 bikes and 600 stations across Manhattan, Brooklyn, Queens, and Jersey City. 
+      This dataset includes Citi Bike trips performed in 2023.
+    docs: 
+      show: true
+    

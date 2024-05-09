@@ -1,0 +1,24 @@
+
+#-------------------------------------------------------------------------
+# This file allows the DBT to know how to connect to the database. 
+#-------------------------------------------------------------------------
+
+# Set up a RDS profile
+[profile_name]: #Change the profile name
+  # --------------
+  # Default Target
+  # --------------
+  # Must be one of the targets defined in the outputs
+  target: dev # this is the default target
+  
+  outputs:
+    dev:
+      # Update the properties below
+      type: [type of the database]
+      host: [hostname]
+      user: [username]
+      password: [password]
+      port: [port]
+      dbname: [database name]
+      schema: [dbt schema]
+      threads: [1 or more]

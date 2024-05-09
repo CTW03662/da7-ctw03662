@@ -1,0 +1,5 @@
+version: 2
+
+seeds:
+  - name: t_city_bikes_zone
+    

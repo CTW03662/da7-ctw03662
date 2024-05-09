@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+- name: [schema_name] #Change it
+  tables:
+  - name: taxis
+    description: >
+      This table provides the Yellow taxi trip records performed in 2023. 
+      The records include fields capturing pick-up and drop-off dates/times, pick-up and drop-off locations, trip distances, itemized fares, rate types, payment types, and driver-reported passenger counts.
+    docs: 
+      show: true
+    
+
+  - name: t_taxi_zones_shp
+    docs: 
+      show: true
+    
