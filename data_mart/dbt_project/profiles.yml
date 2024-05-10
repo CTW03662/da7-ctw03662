@@ -4,7 +4,7 @@
 #-------------------------------------------------------------------------
 
 # Set up a RDS profile
-[profile_name]: #Change the profile name
+academia: #Change the profile name
   # --------------
   # Default Target
   # --------------
@@ -14,11 +14,11 @@
   outputs:
     dev:
       # Update the properties below
-      type: [type of the database]
-      host: [hostname]
-      user: [username]
-      password: [password]
-      port: [port]
-      dbname: [database name]
-      schema: [dbt schema]
-      threads: [1 or more]
+      type: postgres
+      host: da7-data-warehouse.cre2iy7kuiri.eu-central-1.rds.amazonaws.com
+      user: ctw03662
+      password: 90391c652a7a9a5b96a6823544f148ad
+      port: 5432
+      dbname: playground
+      schema: ctw03662_core
+      threads: 2

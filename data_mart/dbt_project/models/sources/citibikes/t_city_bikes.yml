@@ -1,12 +1,40 @@
 version: 2
 
 sources:
-- name: [schema_name] #Change it
-  tables:
-  - name: t_city_bikes
-    description: >
-      Citi Bike is the nation's largest bike share program, with 10,000 bikes and 600 stations across Manhattan, Brooklyn, Queens, and Jersey City. 
-      This dataset includes Citi Bike trips performed in 2023.
-    docs: 
-      show: true
+  - name: ctw03662_staging # Schema
+    tables:
+      - name: t_city_bikes
+        description: >
+          Citi Bike is the nation's largest bike share program, with 10,000 bikes and 600 stations across Manhattan, Brooklyn, Queens, and Jersey City. 
+          This dataset includes Citi Bike trips performed in 2023.
+        docs: 
+          show: true
+        columns:
+          - name: ride_id
+            description: "Unique identifier for each ride."
+          - name: rideable_type
+            description: "Type of rideable (e.g., standard bike, electric bike)."
+          - name: started_at
+            description: "Timestamp when the ride started."
+          - name: ended_at
+            description: "Timestamp when the ride ended."
+          - name: start_station_name
+            description: "Name of the station where the ride started."
+          - name: start_station_id
+            description: "Identifier for the start station."
+          - name: end_station_name
+            description: "Name of the station where the ride ended."
+          - name: end_station_id
+            description: "Identifier for the end station."
+          - name: start_lat
+            description: "Latitude of the start station."
+          - name: start_lng
+            description: "Longitude of the start station."
+          - name: end_lat
+            description: "Latitude of the end station."
+          - name: end_lng
+            description: "Longitude of the end station."
+          - name: member_casual
+            description: "Type of rider, whether they are a member or a casual rider."
+
     

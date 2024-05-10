@@ -1,0 +1,64 @@
+version: 2
+
+models:
+  - name: dim_date
+    description: "A dimension table containing date attributes for every day within the specified range."
+
+    config:
+      materialized: table
+      contract:
+        enforced: true
+
+    constraints:
+      - type: primary_key
+        columns: [date]
+
+    columns:
+      - name: date
+        description: "The actual date."
+        data_type: date
+        tests:
+          - not_null
+          - unique
+
+      - name: day
+        description: "The day of the month."
+        data_type: integer
+        tests:
+          - not_null
+
+      - name: month
+        description: "The month number (1-12)."
+        data_type: integer
+        tests:
+          - not_null
+
+      - name: month_description
+        description: "The full name of the month."
+        data_type: varchar(20)
+        tests:
+          - not_null
+
+      - name: year
+        description: "The year of the date."
+        data_type: integer
+        tests:
+          - not_null
+
+      - name: week_day
+        description: "The name of the day of the week."
+        data_type: varchar(20)
+        tests:
+          - not_null
+
+      - name: week_number
+        description: "The ISO week number of the year."
+        data_type: integer
+        tests:
+          - not_null
+
+      - name: season
+        description: "The season based on the month."
+        data_type: varchar(20)
+        tests:
+          - not_null

@@ -2,4 +2,17 @@ version: 2
 
 seeds:
   - name: t_city_bikes_zone
-    
+    config:
+      enabled: true
+      description: "Geolocation information of the citi bikes stations, such as the borough and zone."
+      column_types:
+        terminal_id: float
+        borough: varchar(50)
+        zone: varchar(50)
+    columns:
+      - name: terminal_id
+        description: "Identifier of the ending/starting station"
+      - name: borough
+        description: "Name of the borough of the ending/starting station"
+      - name: zone
+        description: "Name of the zone of the ending/starting station"

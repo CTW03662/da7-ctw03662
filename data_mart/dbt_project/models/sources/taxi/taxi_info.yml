@@ -1,17 +1,73 @@
 version: 2
 
 sources:
-- name: [schema_name] #Change it
-  tables:
-  - name: taxis
-    description: >
-      This table provides the Yellow taxi trip records performed in 2023. 
-      The records include fields capturing pick-up and drop-off dates/times, pick-up and drop-off locations, trip distances, itemized fares, rate types, payment types, and driver-reported passenger counts.
-    docs: 
-      show: true
-    
+  - name: ctw03662_staging # Name of schema
+    tables:
+      - name: t_yellow_cabs
+        description: >
+          This table provides the Yellow taxi trip records performed in 2023. 
+          The records include fields capturing pick-up and drop-off dates/times, pick-up and drop-off locations, trip distances, itemized fares, rate types, payment types, and driver-reported passenger counts.
+        docs: 
+          show: true
+        columns:
+          - name: vendor_id
+            description: "Identifier for the vendor."
+          - name: tpep_pickup_datetime
+            description: "The date and time when the meter was engaged."
+          - name: tpep_dropoff_datetime
+            description: "The date and time when the meter was disengaged."
+          - name: passenger_count
+            description: "The number of passengers in the vehicle. This is a driver-entered value."
+          - name: trip_distance
+            description: "The elapsed trip distance in miles reported by the taximeter."
+          - name: rate_code_id
+            description: "The rate code in effect at the end of the trip."
+          - name: store_and_fwd_flag
+            description: "This flag indicates whether the trip record was stored in vehicle memory before sending to the vendor, aka 'store and forward,' because the vehicle did not have a connection to the server."
+          - name: pu_location_id
+            description: "TLC Taxi Zone in which the taximeter was engaged."
+          - name: do_location_id
+            description: "TLC Taxi Zone in which the taximeter was disengaged."
+          - name: payment_type
+            description: "A numeric code signifying how the passenger paid for the trip."
+          - name: fare_amount
+            description: "The time-and-distance fare calculated by the meter."
+          - name: extra
+            description: "Miscellaneous extras and surcharges."
+          - name: mta_tax
+            description: "0.50 MTA tax that is automatically triggered based on the metered rate in use."
+          - name: tip_amount
+            description: "Tip amount – This field is automatically populated for credit card tips. Cash tips are not included."
+          - name: tolls_amount
+            description: "Total amount of all tolls paid in trip."
+          - name: improvement_surcharge
+            description: "0.30 improvement surcharge assessed on trips at the flag drop. The improvement surcharge began being levied in 2015."
+          - name: total_amount
+            description: "The total amount of all fares, taxes, surcharges, and tips paid by the passenger."
+          - name: congestion_surcharge
+            description: "A surcharge applied to all trips that start, end, or pass through a congestion zone."
+          - name: airport_fee
+            description: "A fee for trips that originate or terminate at certain NYC airports."
 
-  - name: t_taxi_zones_shp
-    docs: 
-      show: true
-    
+      - name: t_taxi_zones_shp
+        schema: ctw03662_staging
+        description: >
+          Table includes geospatial data for taxi zones used in the analysis of taxi and ride-sharing trips in NYC. It includes the polygonal geometry data for mapping, as well as identifiers and textual descriptions of zones and boroughs.
+        docs: 
+          show: true
+        columns:
+          - name: object_id
+            description: "Unique identifier for each shape record."
+          - name: shape_leng
+            description: "The length of the shape perimeter."
+          - name: shape_area
+            description: "The area of the shape."
+          - name: zone
+            description: "The designated zone name."
+          - name: location_id
+            description: "The TLC designated location ID associated with the zone."
+          - name: borough
+            description: "The name of the borough in which the zone is located."
+          - name: geometry
+            description: "The text representation of the geographic shape of the zone."
+          

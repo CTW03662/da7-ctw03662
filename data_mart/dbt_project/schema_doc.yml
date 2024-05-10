@@ -1,0 +1,13 @@
+[0m11:26:40  Running with dbt=1.7.14
+[0m11:26:40  Registered adapter: postgres=1.7.14
+[0m11:26:41  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models
+[0m11:26:41  Found 2 seeds, 3 sources, 0 exposures, 0 metrics, 535 macros, 0 groups, 0 semantic models
+version: 2
+
+sources:
+  - name: ctw03662_staging
+    tables:
+      - name: t_citibikes
+      - name: t_yellow_cabs

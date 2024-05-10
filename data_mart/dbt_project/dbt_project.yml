@@ -13,13 +13,13 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: [name_of_the_project]
+name: da7_ctw03662
 version: '1.0.0'
 config-version: 2
 
 # This setting configures which "profile" dbt uses for this project.
 # Make sure that the profile_name is the same as set on the profiles.yml
-profile: [profile_name]
+profile: academia
 
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
@@ -42,5 +42,11 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 # Add here the documention properties for the models and seeds
 models:
-
+  +persist_docs:
+      relation: true
+      columns: true
+      
 seeds:
+  +persist_docs:
+        relation: true
+        columns: true
