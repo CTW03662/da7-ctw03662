@@ -1,0 +1,31 @@
+Rank,Swing[a],Team,Territory,Value[b],Change[c],Debt[d],Revenue[e],Operating Income[f]
+1,2.0,Golden State Warriors,California,7.7,100%,16%,765,$206 million
+2,1.0,New York Knicks,New York,6.6,52.5%,4%,452,$155 million
+3,1.0,Los Angeles Lakers,California,6.4,59.5%,1%,465,$115 million
+4,,Boston Celtics,Massachusetts,4.7,42.9%,5%,361,$326.5 million
+5,3.0,Los Angeles Clippers,California,4.65,77.3%,2%,362,$12 million
+6,,Chicago Bulls,Illinois,4.6,41.4%,4%,352,$135 million
+7,,Dallas Mavericks,Texas,4.5,46.7%,3%,364,$143 million
+8,2.0,Houston Rockets,Texas,4.4,39.1%,6%,350,$113 million
+9,6.0,Philadelphia 76ers,Pennsylvania,0.3,90.9%,4%,345,$87 million
+10,2.0,Toronto Raptors,Ontario,4.1,100%,32%,305,$75 million
+11,4.0,Phoenix Suns,Arizona,4.0,80%,9%,302,$87 million
+12,2.0,Miami Heat,Florida,3.9,71.4%,14%,326,$83 million
+13,1.0,Brooklyn Nets,New York,3.85,48.9%,8%,405,–$34 million
+14,2.0,Washington Wizards,"Washington, D.C.",3.5,61.3%,7%,291,$90 million
+22,1.0,Denver Nuggets,Colorado,3.38,40.4%,15%,273,$67 million
+15,7.0,Milwaukee Bucks,Wisconsin,2.3,70.4%,14%,352,$51 million
+16,2.0,Portland Trail Blazers,Oregon,2.1,31.3%,9%,291,$81 million
+17,8.0,Cleveland Cavaliers,Ohio,2.05,60.8%,11%,325,$74 million
+18,3.0,Sacramento Kings,California,2.03,28.9%,28%,279,$29 million
+19,,Utah Jazz,Utah,2.025,42.1%,15%,308,$58 million
+20,7.0,San Antonio Spurs,Texas,2.0,23.1%,9%,306,$99 million
+21,3.0,Atlanta Hawks,Georgia,1.975,51.9%,13%,282,$84 million
+23,3.0,Detroit Pistons,Michigan,1.9,49.6%,11%,278,$92 million
+24,6.0,Oklahoma City Thunder,Oklahoma,1.875,27.1%,10%,274,$129 million
+25,2.0,Orlando Magic,Florida,1.85,39.65,11%,272,$98 million
+26,6.0,Indiana Pacers,Indiana,1.8,28.6%,14%,264,$65 million
+27,1.0,Charlotte Hornets,North Carolina,1.7,39.4%,12%,269,$94 million
+28,1.0,Minnesota Timberwolves,Minnesota,1.67,32.5%,14%,271,$87 million
+29,1.0,Memphis Grizzlies,Tennessee,1.65,37.5%,22%,272,$107 million
+30,1.0,New Orleans Pelicans,Louisiana,1.6,31.1%,14%,268,$94 million
